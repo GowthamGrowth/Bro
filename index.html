@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gowtham | Developer Portfolio</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: white;
+      }
+
+      /* NAVBAR */
+      nav {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 10%;
+        z-index: 1000;
+      }
+
+      nav h2 {
+        color: #00f5ff;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #00f5ff;
+      }
+
+      /* HEADER */
+      header {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 60px;
+      }
+
+      header img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 4px solid #00f5ff;
+        margin-bottom: 20px;
+        box-shadow: 0 0 25px #00f5ff;
+      }
+
+      header h1 {
+        font-size: 40px;
+      }
+
+      header h1 span {
+        color: #00f5ff;
+      }
+
+      header p {
+        margin-top: 10px;
+        font-size: 18px;
+        opacity: 0.9;
+      }
+
+      .btn {
+        margin-top: 20px;
+        padding: 10px 25px;
+        background: #00f5ff;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px #00f5ff;
+      }
+
+      /* SOCIAL ICONS */
+      .social-icons {
+        margin-top: 20px;
+      }
+
+      .social-icons a {
+        color: white;
+        font-size: 22px;
+        margin: 0 10px;
+        transition: 0.3s;
+      }
+
+      .social-icons a:hover {
+        color: #00f5ff;
+        transform: scale(1.2);
+      }
+
+      /* SECTIONS */
+      section {
+        padding: 80px 10%;
+      }
+
+      .title {
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 40px;
+        color: #00f5ff;
+      }
+
+      /* CARDS */
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        border-radius: 15px;
+        width: 280px;
+        text-align: center;
+        transition: 0.4s;
+      }
+
+      .card img {
+        width: 80px;
+        margin-bottom: 15px;
+      }
+
+      .project img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0 25px rgba(0, 245, 255, 0.6);
+      }
+
+      /* FOOTER */
+      footer {
+        text-align: center;
+        padding: 30px;
+        background: rgba(0, 0, 0, 0.5);
+        margin-top: 40px;
+      }
+
+      @media (max-width: 768px) {
+        nav ul {
+          gap: 15px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <h2>Gokul</h2>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- HOME -->
+    <header id="home">
+      <img src="img/code.jpg" alt="Profile Image" />
+      <h1>Hi, I'm <span>Gokul</span></h1>
+      <p>Android Developer | IoT Engineer | ESP8266 Specialist</p>
+
+      <a href="resume.pdf" download>
+        <button class="btn">
+          <i class="fa fa-download"></i> Download Resume
+        </button>
+      </a>
+
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/gowtham9842" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://www.instagram.com/gokul.k14" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://youtube.com/@editer_zone_143?" target="_blank"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a href="https://github.com/GowthamGrowth" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+      </div>
+    </header>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2 class="title">My Skills</h2>
+      <div class="card-container">
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" />
+          <h3>Java</h3>
+        </div>
+
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png" />
+          <h3>Firebase</h3>
+        </div>
+
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" />
+          <h3>HTML & CSS</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2 class="title">Projects</h2>
+      <div class="card-container">
+        <div class="card project">
+          <img src="https://i.ytimg.com/vi/KhVo5ibthr0/maxresdefault.jpg" />
+          <h3>E-Bike Tracker</h3>
+          <p>
+            Real-time speed, battery & distance tracking using ESP8266 +
+            Firebase.
+          </p>
+        </div>
+
+        <div class="card project">
+          <img
+            src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0"
+          />
+          <h3>Smart Home Control</h3>
+          <p>Voice + Timer control using ESP8266 and Blynk.</p>
+        </div>
+
+        <div class="card project">
+          <img
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+          />
+          <h3>GPS Speedometer App</h3>
+          <p>Location-based speed tracking with Firebase history storage.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="title">Contact</h2>
+      <div class="card-container">
+        <div class="card">
+          <p>Email: gokul9344099149@gmail.com</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>© 2026 Gokul | All Rights Reserved</footer>
+  </body>
+</html>
