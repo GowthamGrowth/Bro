@@ -262,33 +262,106 @@
     <!-- PROJECTS -->
     <section id="projects">
       <h2 class="title">Projects</h2>
+
+      <!-- FILTER MENU -->
+      <div class="filter-menu">
+        <button class="filter-btn active" onclick="filterProjects('all')">
+          All
+        </button>
+        <button class="filter-btn" onclick="filterProjects('web')">Web</button>
+        <button class="filter-btn" onclick="filterProjects('design')">
+          Design
+        </button>
+        <button class="filter-btn" onclick="filterProjects('python')">
+          Python
+        </button>
+      </div>
+
       <div class="card-container">
-        <div class="card project">
-          <img src="https://i.ytimg.com/vi/KhVo5ibthr0/maxresdefault.jpg" />
-          <h3>E-Bike Tracker</h3>
-          <p>
-            Real-time speed, battery & distance tracking using ESP8266 +
-            Firebase.
-          </p>
-        </div>
-
-        <div class="card project">
-          <img
-            src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0"
-          />
-          <h3>Smart Home Control</h3>
-          <p>Voice + Timer control using ESP8266 and Blynk.</p>
-        </div>
-
-        <div class="card project">
+        <!-- WEB PROJECT -->
+        <div class="card project web">
           <img
             src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
           />
-          <h3>GPS Speedometer App</h3>
-          <p>Location-based speed tracking with Firebase history storage.</p>
+          <h3>Portfolio Website</h3>
+          <p>Responsive personal website using HTML & CSS.</p>
+        </div>
+
+        <!-- DESIGN PROJECT -->
+        <div class="card project design">
+          <img
+            src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"
+          />
+          <h3>UI Design</h3>
+          <p>Modern UI design concept using Figma.</p>
+        </div>
+
+        <!-- PYTHON PROJECT -->
+        <div class="card project python">
+          <img
+            src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"
+          />
+          <h3>Python Automation</h3>
+          <p>Automation script using Python.</p>
+        </div>
+
+        <!-- ANOTHER WEB PROJECT -->
+        <div class="card project web">
+          <img
+            src="https://images.unsplash.com/photo-1559027615-cd4628902d4a"
+          />
+          <h3>E-Commerce Website</h3>
+          <p>Full stack shopping website.</p>
         </div>
       </div>
     </section>
+
+    <style>
+      /* FILTER MENU STYLE */
+      .filter-menu {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .filter-btn {
+        padding: 8px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        transition: 0.3s;
+      }
+
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: #00f5ff;
+        color: black;
+      }
+    </style>
+
+    <script>
+      function filterProjects(category) {
+        let projects = document.querySelectorAll(".project");
+        let buttons = document.querySelectorAll(".filter-btn");
+
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        event.target.classList.add("active");
+
+        projects.forEach((project) => {
+          if (category === "all") {
+            project.style.display = "block";
+          } else {
+            if (project.classList.contains(category)) {
+              project.style.display = "block";
+            } else {
+              project.style.display = "none";
+            }
+          }
+        });
+      }
+    </script>
 
     <!-- CONTACT -->
     <section id="contact">
