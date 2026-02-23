@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gowtham | Developer Portfolio</title>
 
-    <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -58,7 +55,6 @@
       nav ul li a {
         text-decoration: none;
         color: white;
-        font-weight: 500;
         transition: 0.3s;
       }
 
@@ -86,22 +82,17 @@
         box-shadow: 0 0 25px #00f5ff;
       }
 
-      header h1 {
-        font-size: 40px;
-      }
-
       header h1 span {
         color: #00f5ff;
       }
 
       header p {
         margin-top: 10px;
-        font-size: 18px;
         opacity: 0.9;
       }
 
       .btn {
-        margin-top: 20px;
+        margin-top: 15px;
         padding: 10px 25px;
         background: #00f5ff;
         border: none;
@@ -116,7 +107,6 @@
         box-shadow: 0 0 20px #00f5ff;
       }
 
-      /* SOCIAL ICONS */
       .social-icons {
         margin-top: 20px;
       }
@@ -133,7 +123,6 @@
         transform: scale(1.2);
       }
 
-      /* SECTIONS */
       section {
         padding: 80px 10%;
       }
@@ -143,6 +132,27 @@
         font-size: 35px;
         margin-bottom: 40px;
         color: #00f5ff;
+      }
+
+      /* SKILLS */
+      .skill-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        border-radius: 15px;
+        width: 200px;
+        text-align: center;
+        transition: 0.4s;
+      }
+
+      .skill-card img {
+        width: 70px;
+        margin-bottom: 10px;
+      }
+
+      .skill-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 0 20px rgba(0, 245, 255, 0.6);
       }
 
       /* CARDS */
@@ -161,14 +171,10 @@
         width: 280px;
         text-align: center;
         transition: 0.4s;
+        cursor: pointer;
       }
 
       .card img {
-        width: 80px;
-        margin-bottom: 15px;
-      }
-
-      .project img {
         width: 100%;
         height: 160px;
         object-fit: cover;
@@ -181,7 +187,65 @@
         box-shadow: 0 0 25px rgba(0, 245, 255, 0.6);
       }
 
-      /* FOOTER */
+      /* FILTER MENU */
+      .filter-menu {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .filter-btn {
+        padding: 8px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        transition: 0.3s;
+      }
+
+      .filter-btn.active,
+      .filter-btn:hover {
+        background: #00f5ff;
+        color: black;
+      }
+
+      /* MODAL */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+      }
+
+      .modal-content {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 30px;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 500px;
+        text-align: center;
+      }
+
+      .modal-content img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+
+      .close {
+        float: right;
+        font-size: 25px;
+        cursor: pointer;
+      }
+
       footer {
         text-align: center;
         padding: 30px;
@@ -199,9 +263,8 @@
   </head>
 
   <body>
-    <!-- NAVBAR -->
     <nav>
-      <h2>Gokul</h2>
+      <h2>KG</h2>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -210,13 +273,12 @@
       </ul>
     </nav>
 
-    <!-- HOME -->
     <header id="home">
-      <img src="img/code.jpg" alt="Profile Image" />
-      <h1>Hi, I'm <span>Gokul</span></h1>
-      <p>Android Developer | IoT Engineer | ESP8266 Specialist</p>
+      <img src="img/code.jpg" alt="Profile" />
+      <h1>Hi, I'm <span>Gowtham</span></h1>
+      <p>Web Developer | UI/UX Designer | Programmer</p>
 
-      <a href="resume.pdf" download>
+      <a href="Resume.pdf" download>
         <button class="btn">
           <i class="fa fa-download"></i> Download Resume
         </button>
@@ -226,7 +288,7 @@
         <a href="https://www.linkedin.com/in/gowtham9842" target="_blank"
           ><i class="fab fa-linkedin"></i
         ></a>
-        <a href="https://www.instagram.com/gokul.k14" target="_blank"
+        <a href="https://www.instagram.com/it_me_gowtham__143?" target="_blank"
           ><i class="fab fa-instagram"></i
         ></a>
         <a href="https://youtube.com/@editer_zone_143?" target="_blank"
@@ -238,147 +300,246 @@
       </div>
     </header>
 
-    <!-- SKILLS -->
     <section id="skills">
       <h2 class="title">My Skills</h2>
       <div class="card-container">
-        <div class="card">
+        <div class="skill-card">
           <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" />
           <h3>Java</h3>
         </div>
 
-        <div class="card">
-          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png" />
-          <h3>Firebase</h3>
+        <div class="skill-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" />
+          <h3>Python</h3>
         </div>
 
-        <div class="card">
+        <div class="skill-card">
           <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" />
-          <h3>HTML & CSS</h3>
+          <h3>HTML</h3>
+        </div>
+
+        <div class="skill-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" />
+          <h3>CSS</h3>
+        </div>
+
+        <div class="skill-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" />
+          <h3>JavaScript</h3>
+        </div>
+
+        <div class="skill-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" />
+          <h3>MySQL</h3>
+        </div>
+
+        <div class="skill-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" />
+          <h3>Figma</h3>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
     <section id="projects">
       <h2 class="title">Projects</h2>
 
-      <!-- FILTER MENU -->
       <div class="filter-menu">
-        <button class="filter-btn active" onclick="filterProjects('all')">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">
           All
         </button>
-        <button class="filter-btn" onclick="filterProjects('web')">Web</button>
-        <button class="filter-btn" onclick="filterProjects('design')">
+        <button class="filter-btn" onclick="filterProjects('web', this)">
+          Web
+        </button>
+        <button class="filter-btn" onclick="filterProjects('design', this)">
           Design
         </button>
-        <button class="filter-btn" onclick="filterProjects('python')">
+        <button class="filter-btn" onclick="filterProjects('python', this)">
           Python
         </button>
       </div>
 
       <div class="card-container">
-        <!-- WEB PROJECT -->
-        <div class="card project web">
-          <img
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
-          />
-          <h3>Portfolio Website</h3>
-          <p>Responsive personal website using HTML & CSS.</p>
+        <div
+          class="card project web"
+          onclick="
+            openProject(
+              'Speak Ease',
+              'Responsive website built using HTML & CSS.',
+              'https://gowthamgrowth.github.io/Portfolio/web.png',
+              'https://speak-ease.onrender.com/',
+            )
+          "
+        >
+          <img src="https://gowthamgrowth.github.io/Portfolio/web.png" />
+          <h3>Speak Ease</h3>
+          <p>Click to view</p>
         </div>
 
-        <!-- DESIGN PROJECT -->
-        <div class="card project design">
+        <div
+          class="card project web"
+          onclick="
+            openProject(
+              'College Project',
+              'Responsive website built using HTML & CSS.',
+              'https://www.weverve.com/wp-content/uploads/2020/10/ecommerce-1.jpg',
+              'https:',
+            )
+          "
+        >
           <img
-            src="https://images.unsplash.com/photo-1492724441997-5dc865305da7"
+            src="https://www.weverve.com/wp-content/uploads/2020/10/ecommerce-1.jpg"
+          />
+          <h3>College Project</h3>
+          <p>ongoing</p>
+        </div>
+
+        <div
+          class="card project design"
+          onclick="
+            openProject(
+              'Instagram',
+              'Modern UI design using Figma.',
+              'https://images.alphacoders.com/101/1017007.jpg',
+              'https://www.figma.com/design/8AfqsadsDOfXnLhAWrSFyQ/Instagram?t=A5TEDES4B3xjCsjs-1',
+            )
+          "
+        >
+          <img src="https://images.alphacoders.com/101/1017007.jpg" />
+          <h3>UI Design</h3>
+          <p>Click to view</p>
+        </div>
+
+        <div
+          class="card project design"
+          onclick="
+            openProject(
+              'Linkedin',
+              'Modern UI design using Figma.',
+              'https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2024/05/a-hand-with-a-hologram-and-some-circuits-illustrating-artificial-intelligence-with-the-linkedin-logo-in-the-center.jpg',
+              'https://www.figma.com/design/HOKuouLbhWTdA4koC0RboE/linked-in?t=A5TEDES4B3xjCsjs-1',
+            )
+          "
+        >
+          <img
+            src="https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2024/05/a-hand-with-a-hologram-and-some-circuits-illustrating-artificial-intelligence-with-the-linkedin-logo-in-the-center.jpg"
           />
           <h3>UI Design</h3>
-          <p>Modern UI design concept using Figma.</p>
+          <p>Click to view</p>
         </div>
 
-        <!-- PYTHON PROJECT -->
-        <div class="card project python">
+        <div
+          class="card project design"
+          onclick="
+            openProject(
+              'Usis Technologies InterviewS Task',
+              'Modern UI design using Figma.',
+              'https://geekbea.com/wp-content/uploads/2023/07/Food-Delivery-App.jpg',
+              'https://www.figma.com/design/ghgLwvVE1si1m0LsNvZwnl/UI-UX---Test-Task?node-id=4-655&p=f&t=3mj2L0CCvSutawkO-0',
+            )
+          "
+        >
+          <img
+            src="https://geekbea.com/wp-content/uploads/2023/07/Food-Delivery-App.jpg"
+          />
+          <h3>UI Design</h3>
+          <p>Click to view</p>
+        </div>
+
+        <div
+          class="card project design"
+          onclick="
+            openProject(
+              'College Project',
+              'Modern UI design using Figma.',
+              'https://www.weverve.com/wp-content/uploads/2020/10/ecommerce-1.jpg',
+              'https://www.figma.com/design/d69lCFzWOAvI77iyYgAAFi/Untitled?node-id=0-1&t=UpoBTbh7y27mmexF-1',
+            )
+          "
+        >
+          <img
+            src="https://www.weverve.com/wp-content/uploads/2020/10/ecommerce-1.jpg"
+          />
+          <h3>UI Design</h3>
+          <p>Click to view</p>
+        </div>
+
+        <div
+          class="card project python"
+          onclick="
+            openProject(
+              'Python Automation',
+              'Automation script using Python.',
+              'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5',
+              'https://github.com/GowthamGrowth/Python-Project',
+            )
+          "
+        >
           <img
             src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"
           />
           <h3>Python Automation</h3>
-          <p>Automation script using Python.</p>
-        </div>
-
-        <!-- ANOTHER WEB PROJECT -->
-        <div class="card project web">
-          <img
-            src="https://images.unsplash.com/photo-1559027615-cd4628902d4a"
-          />
-          <h3>E-Commerce Website</h3>
-          <p>Full stack shopping website.</p>
+          <p>Click to view</p>
         </div>
       </div>
     </section>
 
-    <style>
-      /* FILTER MENU STYLE */
-      .filter-menu {
-        text-align: center;
-        margin-bottom: 30px;
-      }
+    <!-- MODAL -->
+    <div id="projectModal" class="modal" onclick="outsideClick(event)">
+      <div class="modal-content">
+        <span class="close" onclick="closeProject()">&times;</span>
+        <img id="modalImg" />
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <a id="modalLink" target="_blank">
+          <button class="btn">View</button>
+        </a>
+      </div>
+    </div>
 
-      .filter-btn {
-        padding: 8px 20px;
-        margin: 5px;
-        border: none;
-        border-radius: 20px;
-        cursor: pointer;
-        background: rgba(255, 255, 255, 0.2);
-        color: white;
-        transition: 0.3s;
-      }
-
-      .filter-btn:hover,
-      .filter-btn.active {
-        background: #00f5ff;
-        color: black;
-      }
-    </style>
-
-    <script>
-      function filterProjects(category) {
-        let projects = document.querySelectorAll(".project");
-        let buttons = document.querySelectorAll(".filter-btn");
-
-        buttons.forEach((btn) => btn.classList.remove("active"));
-        event.target.classList.add("active");
-
-        projects.forEach((project) => {
-          if (category === "all") {
-            project.style.display = "block";
-          } else {
-            if (project.classList.contains(category)) {
-              project.style.display = "block";
-            } else {
-              project.style.display = "none";
-            }
-          }
-        });
-      }
-    </script>
-
-    <!-- CONTACT -->
     <section id="contact">
       <h2 class="title">Contact</h2>
       <div class="card-container">
         <div class="card">
-          <p>Email: gokul9344099149@gmail.com</p>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-          </div>
+          <p>Email: gowthamk9842@gmail.com</p>
         </div>
       </div>
     </section>
 
-    <footer>© 2026 Gokul | All Rights Reserved</footer>
+    <footer>© 2026 Gowtham | All Rights Reserved</footer>
+
+    <script>
+      function filterProjects(category, btn) {
+        let projects = document.querySelectorAll(".project");
+        let buttons = document.querySelectorAll(".filter-btn");
+        buttons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        projects.forEach((p) => {
+          if (category === "all" || p.classList.contains(category)) {
+            p.style.display = "block";
+          } else {
+            p.style.display = "none";
+          }
+        });
+      }
+
+      function openProject(title, desc, img, link) {
+        document.getElementById("projectModal").style.display = "flex";
+        document.getElementById("modalTitle").innerText = title;
+        document.getElementById("modalDesc").innerText = desc;
+        document.getElementById("modalImg").src = img;
+        document.getElementById("modalLink").href = link;
+      }
+
+      function closeProject() {
+        document.getElementById("projectModal").style.display = "none";
+      }
+
+      function outsideClick(e) {
+        if (e.target.classList.contains("modal")) {
+          closeProject();
+        }
+      }
+    </script>
   </body>
 </html>
